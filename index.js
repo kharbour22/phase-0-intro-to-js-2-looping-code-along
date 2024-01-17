@@ -15,19 +15,20 @@ function wrapGifts(gifts) {
 
 wrapGifts(gifts);
 
-const names = ["Charlie", "Samip", "Ali"];
+const names = ["Guadalupe", "Ollie", "Aki"];
 
-function writeCards(names) {
-    for (let i = 0; i < names.length; i++) {
-      console.log(`Thank you, ${names[i]}, for the wonderful birthday gift!`);
-    }
-  
-    return names;
+function writeCards(names, event) {
+  let messages = [];
+
+  for (let i = 0; i < names.length; i++) {
+    let message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
+    messages.push(message);
   }
 
-writeCards(names);
-
-let countdown = 10;
-while (countdown > 0) {
-    console.log(countdown--);
+  return messages;
+}
+function countDown(number) {
+  for (let i = number; i >= 0; i--) {
+    console.log(i);
+  }
 }
